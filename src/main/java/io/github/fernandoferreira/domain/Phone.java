@@ -29,7 +29,7 @@ public class Phone {
     }
 
     private void checkPhoneNumber(String phoneNumber) {
-        if (Objects.isNull(phoneNumber) || !phoneNumber.matches("[0-9]{9}")) {
+        if (Objects.isNull(phoneNumber) || !phoneNumber.matches("[0-9]{8,9}")) {
             throw new IllegalArgumentException("Invalid phone number");
         }
     }

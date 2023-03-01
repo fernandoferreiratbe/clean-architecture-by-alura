@@ -51,7 +51,7 @@ public class PhoneTest {
     }
 
     @Test
-    @DisplayName("Given a valid ddd and phone number should create a new phone number sucessfully.")
+    @DisplayName("Given a valid ddd and phone number should create a new phone number successfully.")
     void givenValidDddAndPhoneNumber_ShouldPassAllValidations_ThenCreateNewPhoneObject() {
         var phone = new Phone("12", "998887777");
 
