@@ -3,7 +3,7 @@ package io.github.fernandoferreira.domain;
 import lombok.Setter;
 
 import java.util.List;
-@Setter
+
 public class Student {
 
     private CPF cpf;
