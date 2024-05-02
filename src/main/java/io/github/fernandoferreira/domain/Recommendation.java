@@ -4,9 +4,9 @@ import java.time.LocalDateTime;
 
 public class Recommendation {
 
-    private Student indicated;
-    private Student indicator;
-    private LocalDateTime recommendationDateTime;
+    private final Student indicated;
+    private final Student indicator;
+    private final LocalDateTime recommendationDateTime;
 
     public Recommendation(Student indicated, Student indicator) {
         this.indicated = indicated;
