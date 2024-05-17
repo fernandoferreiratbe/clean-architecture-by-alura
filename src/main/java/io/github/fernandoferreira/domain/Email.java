@@ -2,15 +2,12 @@ package io.github.fernandoferreira.domain;
 
 import java.util.Objects;
 
-public class Email {
+public record Email(String address) {
 
-    private String address;
-
-    public Email(String address) throws IllegalArgumentException {
+    public Email {
         if (this.is_invalid_email(address)) {
             throw new IllegalArgumentException("Email address is invalid");
         }
-        this.address = address;
     }
 
     private Boolean is_invalid_email(String address) {
@@ -19,9 +16,5 @@ public class Email {
         }
 
         return Boolean.FALSE;
-    }
-
-    public String getAddress() {
-        return this.address;
     }
 }

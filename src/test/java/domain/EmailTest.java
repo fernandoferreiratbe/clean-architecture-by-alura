@@ -31,7 +31,7 @@ public class EmailTest {
     void givenEmail_ShouldDeterminateAsValid_ThenReturnValidEmailObject() {
         Email email = new Email("name.surname@domain.com.br");
 
-        Assertions.assertEquals("name.surname@domain.com.br", email.getAddress());
+        Assertions.assertEquals("name.surname@domain.com.br", email.address());
     }
 
 }
