@@ -1,15 +1,18 @@
 package io.github.fernandoferreira.domain;
 
-import lombok.Setter;
+import lombok.Getter;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+@Getter
 public class Student {
 
-    private CPF cpf;
-    private String name;
-    private Email email;
-    private List<Phone> phones;
+    private final CPF cpf;
+    private final String name;
+    private final Email email;
+    private final List<Phone> phones = new ArrayList<>();
 
     public Student(CPF cpf, String name, Email email) {
         this.cpf = cpf;
@@ -21,15 +24,4 @@ public class Student {
         this.phones.add(new Phone(ddd, number));
     }
 
-    public CPF getCpf() {
-        return this.cpf;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public Email getEmail() {
-        return this.email;
-    }
 }

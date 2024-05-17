@@ -55,7 +55,7 @@ public class PhoneTest {
     void givenValidDddAndPhoneNumber_ShouldPassAllValidations_ThenCreateNewPhoneObject() {
         var phone = new Phone("12", "998887777");
 
-        Assertions.assertEquals("12", phone.getDdd());
-        Assertions.assertEquals("998887777", phone.getNumber());
+        Assertions.assertEquals("12", phone.ddd());
+        Assertions.assertEquals("998887777", phone.number());
     }
 }

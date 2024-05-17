@@ -1,16 +1,15 @@
 package io.github.fernandoferreira.domain;
 
+import lombok.Getter;
+
 import java.util.Objects;
 
-public class CPF {
+public record CPF(String cpf) {
 
-    private String cpf;
-
-    public CPF(String cpf) {
+    public CPF {
         if (this.is_invalid_cpf(cpf)) {
             throw new IllegalArgumentException("CPF is invalid!");
         }
-        this.cpf = cpf;
     }
 
     private Boolean is_invalid_cpf(String cpf) {
@@ -21,7 +20,4 @@ public class CPF {
         return Boolean.FALSE;
     }
 
-    public String getCpf() {
-        return this.cpf;
-    }
 }

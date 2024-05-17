@@ -1,7 +1,6 @@
 package domain;
 
 import io.github.fernandoferreira.domain.CPF;
-import io.github.fernandoferreira.domain.Email;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -32,7 +31,7 @@ public class CPFTest {
     void givenCpf_ShouldDeterminateAsValid_ThenReturnValidCpfObject() {
         CPF cpf = new CPF("111.222.333-44");
 
-        Assertions.assertEquals("111.222.333-44", cpf.getCpf());
+        Assertions.assertEquals("111.222.333-44", cpf.cpf());
     }
 
 }

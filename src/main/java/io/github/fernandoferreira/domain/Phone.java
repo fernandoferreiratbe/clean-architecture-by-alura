@@ -1,25 +1,14 @@
 package io.github.fernandoferreira.domain;
 
+import lombok.Getter;
+
 import java.util.Objects;
 
-public class Phone {
+public record Phone(String ddd, String number) {
 
-    private String ddd;
-    private String number;
-
-    public Phone(String ddd, String number) {
+    public Phone {
         this.checkDddNumber(ddd);
         this.checkPhoneNumber(number);
-        this.ddd = ddd;
-        this.number = number;
-    }
-
-    public String getDdd() {
-        return this.ddd;
-    }
-
-    public String getNumber() {
-        return this.number;
     }
 
     private void checkDddNumber(String ddd) {
